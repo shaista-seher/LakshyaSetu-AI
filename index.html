@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LakshyaSetu AI - Career Intelligence Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div class="login-page" id="loginPage">
+        <div class="login-container">
+            <div class="login-header">
+                <div class="login-logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <span class="logo-text">LakshyaSetu AI</span>
+                </div>
+                <h1>Welcome Back</h1>
+                <p>Your AI-Powered Career Intelligence Platform</p>
+            </div>
+            
+            <div class="login-form-container" id="loginFormContainer">
+                <form class="login-form" id="loginForm" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                        </div>
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox-wrapper">
+                            <input type="checkbox" id="rememberMe">
+                            <span class="checkmark"></span>
+                            Remember me
+                        </label>
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn-login">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </button>
+                </form>
+                
+                <div class="social-login">
+                    <div class="social-divider">
+                        <span>or continue with</span>
+                    </div>
+                    <button type="button" class="btn-gmail" onclick="handleGmailLogin()">
+                        <i class="fab fa-google"></i>
+                        <span>Login with Gmail</span>
+                    </button>
+                </div>
+                
+                <div class="login-footer">
+                    <p>Don't have an account? <a href="#" onclick="toggleAuthMode('signup')">Sign up</a></p>
+                </div>
+            </div>
+            
+            <div class="signup-form-container" id="signupFormContainer" style="display: none;">
+                <form class="login-form" id="signupForm" onsubmit="handleSignup(event)">
+                    <div class="form-group">
+                        <label for="signupName">Full Name</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="signupName" placeholder="Enter your full name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupEmail">Email Address</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="signupPassword" placeholder="Create a password" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupConfirmPassword">Confirm Password</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="signupConfirmPassword" placeholder="Confirm your password" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-login">
+                        <i class="fas fa-user-plus"></i> Create Account
+                    </button>
+                </form>
+                
+                <div class="login-footer">
+                    <p>Already have an account? <a href="#" onclick="toggleAuthMode('login')">Login</a></p>
+                </div>
+            </div>
+            
+            <div class="login-features">
+                <div class="feature-item">
+                    <i class="fas fa-rocket"></i>
+                    <span>Career Discovery</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Skill Assessment</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-robot"></i>
+                    <span>AI Mentor</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main App Container (Hidden until login) -->
+    <div class="app-container" id="mainApp" style="display: none;">
+        <!-- Floating Chatbot Button -->
+        <div class="floating-chatbot" id="floatingChatbot" onclick="toggleChatbot()">
+            <i class="fas fa-comments"></i>
+            <span class="chatbot-badge">AI</span>
+        </div>
+
+        <!-- Chatbot Panel -->
+        <div class="chatbot-panel" id="chatbotPanel">
+            <div class="chatbot-header">
+                <div class="chatbot-title">
+                    <i class="fas fa-robot"></i>
+                    <span>LakshyaSetu AI Assistant</span>
+                </div>
+                <button class="chatbot-close" onclick="toggleChatbot()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="chatbot-message bot">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>Hello! I'm your AI career assistant. How can I help you today?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbotInput" placeholder="Ask me anything about careers, skills, or exams..." onkeypress="handleChatbotKeyPress(event)">
+                <button onclick="sendChatbotMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            <div class="chatbot-suggestions">
+                <button onclick="quickAsk('career options')">🎯 Career Options</button>
+                <button onclick="quickAsk('skill gaps')">📊 Skill Gaps</button>
+                <button onclick="quickAsk('exam prep')">📚 Exam Prep</button>
+                <button onclick="quickAsk('interview tips')">💼 Interview Tips</button>
+            </div>
+        </div>
+
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <!-- Theme Toggle Button -->
+            <button class="theme-toggle" id="themeToggle" title="Toggle Light/Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+
+            <!-- Logo Section -->
+            <a href="#" class="logo-link" onclick="navigateToSection('home'); return false;">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <span class="logo-text">LakshyaSetu AI</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" data-section="home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item" data-section="career-match">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Career Match</span>
+                </a>
+                <a href="#" class="nav-item" data-section="skill-gap">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Skill Gap</span>
+                </a>
+                <a href="#" class="nav-item" data-section="exams">
+                    <i class="fas fa-book-open"></i>
+                    <span>Exam Pathways</span>
+                </a>
+                <a href="#" class="nav-item" data-section="roadmap">
+                    <i class="fas fa-route"></i>
+                    <span>Learning Roadmap</span>
+                </a>
+                <a href="#" class="nav-item" data-section="interview">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Interview Prep</span>
+                </a>
+                <a href="#" class="nav-item" data-section="mentor">
+                    <i class="fas fa-heart"></i>
+                    <span>Mentor Support</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile" id="userProfile">
+                    <div class="user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name" id="userName">Guest User</span>
+                        <span class="user-status" id="userStatus">Exploring</span>
+                    </div>
+                    <button class="logout-btn" onclick="handleLogout()" title="Logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Home Section -->
+            <section id="home" class="content-section active">
+                <div class="hero-section">
+                    <div class="hero-content">
+                        <h1>Welcome to <span class="highlight">LakshyaSetu AI</span></h1>
+                        <p>Your AI-Powered Career Intelligence and Exam Guidance Platform</p>
+                        <div class="hero-stats">
+                            <div class="stat-card">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Career Paths</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">20+</span>
+                                <span class="stat-label">Exams Covered</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">100+</span>
+                                <span class="stat-label">Courses</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="floating-card card-1">
+                            <i class="fas fa-rocket"></i>
+                            <span>Launch Your Career</span>
+                        </div>
+                        <div class="floating-card card-2">
+                            <i class="fas fa-target"></i>
+                            <span>Achieve Goals</span>
+                        </div>
+                        <div class="floating-card card-3">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Learn & Grow</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <h2>How Can We Help You Today?</h2>
+                    <div class="action-grid">
+                        <div class="action-card" data-section="career-match">
+                            <div class="action-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h3>Find My Career Path</h3>
+                            <p>Match your skills and interests to perfect career roles</p>
+                        </div>
+                        <div class="action-card" data-section="skill-gap">
+                            <div class="action-icon">
+                                <i class="fas fa-list-check"></i>
+                            </div>
+                            <h3>Analyze Skill Gaps</h3>
+                            <p>Identify missing skills and get readiness score</p>
+                        </div>
+                        <div class="action-card" data-section="exams">
+                            <div class="action-icon">
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                            <h3>Explore Exams</h3>
+                            <p>Find government & entrance exam pathways</p>
+                        </div>
+                        <div class="action-card" data-section="interview">
+                            <div class="action-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h3>Prepare for Interviews</h3>
+                            <p>Get practice questions and tips</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="emotional-support-banner" id="emotionalBanner">
+                    <div class="banner-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="banner-content">
+                        <h3>Feeling overwhelmed or uncertain about your career?</h3>
+                        <p>Our AI mentor is here to support you through any confusion or stress.</p>
+                    </div>
+                    <button class="banner-btn" data-section="mentor">Talk to Mentor</button>
+                </div>
+            </section>
+
+            <!-- Career Match Section -->
+            <section id="career-match" class="content-section">
+                <div class="section-header">
+                    <h1>Career Role Matching Engine</h1>
+                    <p>Find the perfect career path based on your skills and interests</p>
+                </div>
+
+                <div class="input-card glass-card">
+                    <h2><i class="fas fa-sliders-h"></i> Your Profile</h2>
+                    <div class="form-group">
+                        <label>Your Skills (comma separated)</label>
+                        <input type="text" id="userSkills" placeholder="e.g., Python, Programming, Data Analysis, Communication">
+                    </div>
+                    <div class="form-group">
+                        <label>Education Level</label>
+                        <select id="educationLevel">
+                            <option value="">Select Education</option>
+                            <option value="Class 12">Class 12</option>
+                            <option value="Diploma">Diploma</option>
+                            <option value="Bachelor's">Bachelor's Degree</option>
+                            <option value="Master's">Master's Degree</option>
+                            <option value="PhD">PhD</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Sector</label>
+                        <select id="preferredSector">
+                            <option value="">Select Sector</option>
+                            <option value="Technology">Technology</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Design">Design</option>
+                            <option value="Business">Business</option>
+                            <option value="Creative">Creative</option>
+                            <option value="IT Infrastructure">IT Infrastructure</option>
+                            <option value="Healthcare">Healthcare</option>
+                            <option value="Government">Government</option>
+                        </select>
+                    </div>
+                    <button class="btn-primary" onclick="matchCareers()">
+                        <i class="fas fa-search"></i> Find Matching Careers
+                    </button>
+                </div>
+
+                <div id="careerResults" class="results-container"></div>
+            </section>
+
+            <!-- Skill Gap Section -->
+            <section id="skill-gap" class="content-section">
+                <div class="section-header">
+                    <h1>Skill Gap & Readiness Engine</h1>
+                    <p>Analyze your readiness for your target role</p>
+                </div>
+
+                <div class="input-card glass-card">
+                    <h2><i class="fas fa-bullseye"></i> Select Target Role</h2>
+                    <div class="form-group">
+                        <label>Choose a role to analyze</label>
+                        <select id="targetRole">
+                            <option value="">Select a Role</option>
+                            <!-- Options populated dynamically -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Skills You Currently Have (comma separated)</label>
+                        <input type="text" id="currentSkills" placeholder="e.g., Python, Communication, Excel">
+                    </div>
+                    <button class="btn-primary" onclick="analyzeSkillGap()">
+                        <i class="fas fa-chart-pie"></i> Analyze Skill Gap
+                    </button>
+                </div>
+
+                <div id="skillGapResults" class="results-container"></div>
+            </section>
+
+            <!-- Exams Section -->
+            <section id="exams" class="content-section">
+                <div class="section-header">
+                    <h1>Exam Guidance Engine</h1>
+                    <p>Find the right exam for your career goals</p>
+                </div>
+
+                <div class="input-card glass-card">
+                    <h2><i class="fas fa-filter"></i> Filter Exams</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Education Level</label>
+                            <select id="examEducation">
+                                <option value="">All Levels</option>
+                                <option value="Class 12">Class 12</option>
+                                <option value="Bachelor's">Bachelor's</option>
+                                <option value="Master's">Master's</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Exam Type</label>
+                            <select id="examType">
+                                <option value="">All Types</option>
+                                <option value="Engineering Entrance">Engineering Entrance</option>
+                                <option value="Medical Entrance">Medical Entrance</option>
+                                <option value="Government Services">Government Services</option>
+                                <option value="Management Entrance">Management Entrance</option>
+                                <option value="Banking">Banking</option>
+                                <option value="Law Entrance">Law Entrance</option>
+                                <option value="Defense Services">Defense Services</option>
+                                <option value="Professional Course">Professional Course</option>
+                                <option value="Academic">Academic</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Target Career Path</label>
+                            <select id="examCareer">
+                                <option value="">All Careers</option>
+                                <option value="Software Developer">Software Developer</option>
+                                <option value="Doctor">Doctor</option>
+                                <option value="IAS Officer">IAS Officer</option>
+                                <option value="Business Analyst">Business Analyst</option>
+                                <option value="Bank PO">Bank PO</option>
+                                <option value="Lawyer">Lawyer</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn-primary" onclick="filterExams()">
+                        <i class="fas fa-search"></i> Find Exams
+                    </button>
+                </div>
+
+                <div id="examResults" class="results-container"></div>
+            </section>
+
+            <!-- Learning Roadmap Section -->
+            <section id="roadmap" class="content-section">
+                <div class="section-header">
+                    <h1>Learning Roadmap Generator</h1>
+                    <p>Get a structured 3-stage learning path for your target role</p>
+                </div>
+
+                <div class="input-card glass-card">
+                    <h2><i class="fas fa-map"></i> Generate Your Roadmap</h2>
+                    <div class="form-group">
+                        <label>Target Role</label>
+                        <select id="roadmapRole">
+                            <option value="">Select a Role</option>
+                            <!-- Options populated dynamically -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Current Skill Level</label>
+                        <select id="currentLevel">
+                            <option value="beginner">Beginner (Just Starting)</option>
+                            <option value="intermediate">Intermediate (Some Knowledge)</option>
+                            <option value="advanced">Advanced (Strong Foundation)</option>
+                        </select>
+                    </div>
+                    <button class="btn-primary" onclick="generateRoadmap()">
+                        <i class="fas fa-route"></i> Generate Roadmap
+                    </button>
+                </div>
+
+                <div id="roadmapResults" class="results-container"></div>
+            </section>
+
+            <!-- Interview Prep Section -->
+            <section id="interview" class="content-section">
+                <div class="section-header">
+                    <h1>Interview Preparation</h1>
+                    <p>Prepare for your next interview with practice questions</p>
+                </div>
+
+                <div class="input-card glass-card">
+                    <h2><i class="fas fa-user-tie"></i> Select Role for Interview Prep</h2>
+                    <div class="form-group">
+                        <label>Target Role</label>
+                        <select id="interviewRole">
+                            <option value="">Select a Role</option>
+                            <!-- Options populated dynamically -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Experience Level</label>
+                        <select id="experienceLevel">
+                            <option value="fresher">Fresher (0-2 years)</option>
+                            <option value="mid">Mid-Level (2-5 years)</option>
+                            <option value="senior">Senior (5+ years)</option>
+                        </select>
+                    </div>
+                    <button class="btn-primary" onclick="prepareInterview()">
+                        <i class="fas fa-clipboard-check"></i> Get Interview Questions
+                    </button>
+                </div>
+
+                <div id="interviewResults" class="results-container"></div>
+            </section>
+
+            <!-- Mentor Support Section -->
+            <section id="mentor" class="content-section">
+                <div class="section-header">
+                    <h1>Professional Mentor Support</h1>
+                    <p>We're here to support you through any challenges</p>
+                </div>
+
+                <div class="mentor-intro glass-card">
+                    <div class="mentor-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="mentor-info">
+                        <h2>AI Career Mentor</h2>
+                        <p>I'm here to help you navigate career challenges, build confidence, and stay motivated. Share your thoughts or concerns with me.</p>
+                    </div>
+                </div>
+
+                <div class="emotion-selector">
+                    <h3>How are you feeling today?</h3>
+                    <div class="emotion-buttons">
+                        <button class="emotion-btn" data-emotion="confused">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Confused</span>
+                        </button>
+                        <button class="emotion-btn" data-emotion="stressed">
+                            <i class="fas fa-tired"></i>
+                            <span>Stressed</span>
+                        </button>
+                        <button class="emotion-btn" data-emotion="demotivated">
+                            <i class="fas fa-arrow-down"></i>
+                            <span>Demotivated</span>
+                        </button>
+                        <button class="emotion-btn" data-emotion="overwhelmed">
+                            <i class="fas fa-brain"></i>
+                            <span>Overwhelmed</span>
+                        </button>
+                        <button class="emotion-btn" data-emotion="anxious">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span>Anxious</span>
+                        </button>
+                        <button class="emotion-btn" data-emotion="confident">
+                            <i class="fas fa-star"></i>
+                            <span>Confident</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="chat-container glass-card">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message bot-message">
+                            <div class="message-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>Hello! I'm your AI Career Mentor. I'm here to listen and help you navigate your career journey. How are you feeling today, or what would you like to discuss?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" id="chatInput" placeholder="Share your thoughts or ask for advice...">
+                        <button class="btn-send" onclick="sendMessage()">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mentor-tips">
+                    <h3>Quick Action Steps</h3>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <i class="fas fa-calendar-check"></i>
+                            <h4>Create a Plan</h4>
+                            <p>Break your goals into small, manageable tasks</p>
+                        </div>
+                        <div class="tip-card">
+                            <i class="fas fa-medal"></i>
+                            <h4>Celebrate Wins</h4>
+                            <p>Acknowledge every small achievement</p>
+                        </div>
+                        <div class="tip-card">
+                            <i class="fas fa-users"></i>
+                            <h4>Seek Support</h4>
+                            <p>Connect with mentors and peers</p>
+                        </div>
+                        <div class="tip-card">
+                            <i class="fas fa-balance-scale"></i>
+                            <h4>Stay Balanced</h4>
+                            <p>Take breaks and maintain wellness</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

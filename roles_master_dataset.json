@@ -1,0 +1,224 @@
+{
+  "roles": [
+    {
+      "id": 1,
+      "role_name": "Software Developer",
+      "category": "Technology",
+      "required_skills": [
+        {"skill": "Programming", "importance": 0.9},
+        {"skill": "Problem Solving", "importance": 0.85},
+        {"skill": "Data Structures", "importance": 0.8},
+        {"skill": "Algorithms", "importance": 0.8},
+        {"skill": "Version Control", "importance": 0.7},
+        {"skill": "Database Management", "importance": 0.6},
+        {"skill": "Web Development", "importance": 0.7}
+      ],
+      "salary_range": {
+        "entry_level": "₹4-8 LPA",
+        "mid_level": "₹8-15 LPA",
+        "senior_level": "₹15-30+ LPA"
+      },
+      "industry_demand_score": 9.2,
+      "education_required": "Bachelor's in Computer Science or related",
+      "growth_potential": "High"
+    },
+    {
+      "id": 2,
+      "role_name": "Data Scientist",
+      "category": "Technology",
+      "required_skills": [
+        {"skill": "Python", "importance": 0.9},
+        {"skill": "Statistics", "importance": 0.85},
+        {"skill": "Machine Learning", "importance": 0.9},
+        {"skill": "Data Analysis", "importance": 0.85},
+        {"skill": "SQL", "importance": 0.8},
+        {"skill": "Data Visualization", "importance": 0.7},
+        {"skill": "Mathematics", "importance": 0.8}
+      ],
+      "salary_range": {
+        "entry_level": "₹6-12 LPA",
+        "mid_level": "₹12-25 LPA",
+        "senior_level": "₹25-50+ LPA"
+      },
+      "industry_demand_score": 9.5,
+      "education_required": "Bachelor's/Master's in Data Science, Statistics, or related",
+      "growth_potential": "Very High"
+    },
+    {
+      "id": 3,
+      "role_name": "Digital Marketing Specialist",
+      "category": "Marketing",
+      "required_skills": [
+        {"skill": "SEO", "importance": 0.8},
+        {"skill": "Content Marketing", "importance": 0.85},
+        {"skill": "Social Media Marketing", "importance": 0.8},
+        {"skill": "Analytics", "importance": 0.75},
+        {"skill": "Copywriting", "importance": 0.7},
+        {"skill": "Email Marketing", "importance": 0.6},
+        {"skill": "PPC Advertising", "importance": 0.7}
+      ],
+      "salary_range": {
+        "entry_level": "₹3-6 LPA",
+        "mid_level": "₹6-12 LPA",
+        "senior_level": "₹12-25+ LPA"
+      },
+      "industry_demand_score": 8.5,
+      "education_required": "Bachelor's in Marketing, Business, or related",
+      "growth_potential": "High"
+    },
+    {
+      "id": 4,
+      "role_name": "Civil Engineer",
+      "category": "Engineering",
+      "required_skills": [
+        {"skill": "AutoCAD", "importance": 0.85},
+        {"skill": "Structural Analysis", "importance": 0.9},
+        {"skill": "Project Management", "importance": 0.8},
+        {"skill": "Construction Management", "importance": 0.8},
+        {"skill": "Mathematics", "importance": 0.85},
+        {"skill": "Physics", "importance": 0.7},
+        {"skill": "Building Codes", "importance": 0.75}
+      ],
+      "salary_range": {
+        "entry_level": "₹3-6 LPA",
+        "mid_level": "₹6-15 LPA",
+        "senior_level": "₹15-35+ LPA"
+      },
+      "industry_demand_score": 7.8,
+      "education_required": "Bachelor's in Civil Engineering",
+      "growth_potential": "Medium"
+    },
+    {
+      "id": 5,
+      "role_name": "Financial Analyst",
+      "category": "Finance",
+      "required_skills": [
+        {"skill": "Financial Analysis", "importance": 0.9},
+        {"skill": "Excel", "importance": 0.85},
+        {"skill": "Accounting", "importance": 0.8},
+        {"skill": "Financial Modeling", "importance": 0.85},
+        {"skill": "Statistics", "importance": 0.7},
+        {"skill": "Business Acumen", "importance": 0.75},
+        {"skill": "Communication", "importance": 0.7}
+      ],
+      "salary_range": {
+        "entry_level": "₹4-8 LPA",
+        "mid_level": "₹8-18 LPA",
+        "senior_level": "₹18-40+ LPA"
+      },
+      "industry_demand_score": 8.2,
+      "education_required": "Bachelor's/Master's in Finance, Economics, or related",
+      "growth_potential": "High"
+    },
+    {
+      "id": 6,
+      "role_name": "UX/UI Designer",
+      "category": "Design",
+      "required_skills": [
+        {"skill": "Design Principles", "importance": 0.9},
+        {"skill": "Figma", "importance": 0.85},
+        {"skill": "User Research", "importance": 0.8},
+        {"skill": "Prototyping", "importance": 0.85},
+        {"skill": "Adobe Creative Suite", "importance": 0.75},
+        {"skill": "HTML/CSS", "importance": 0.6},
+        {"skill": "Communication", "importance": 0.7}
+      ],
+      "salary_range": {
+        "entry_level": "₹3-7 LPA",
+        "mid_level": "₹7-15 LPA",
+        "senior_level": "₹15-30+ LPA"
+      },
+      "industry_demand_score": 8.8,
+      "education_required": "Bachelor's in Design, HCI, or related",
+      "growth_potential": "High"
+    },
+    {
+      "id": 7,
+      "role_name": "Mechanical Engineer",
+      "category": "Engineering",
+      "required_skills": [
+        {"skill": "CAD Software", "importance": 0.9},
+        {"skill": "Thermodynamics", "importance": 0.85},
+        {"skill": "Manufacturing Processes", "importance": 0.8},
+        {"skill": "Project Management", "importance": 0.75},
+        {"skill": "Mathematics", "importance": 0.85},
+        {"skill": "Physics", "importance": 0.8},
+        {"skill": "Problem Solving", "importance": 0.8}
+      ],
+      "salary_range": {
+        "entry_level": "₹3-6 LPA",
+        "mid_level": "₹6-15 LPA",
+        "senior_level": "₹15-35+ LPA"
+      },
+      "industry_demand_score": 7.5,
+      "education_required": "Bachelor's in Mechanical Engineering",
+      "growth_potential": "Medium"
+    },
+    {
+      "id": 8,
+      "role_name": "Content Writer",
+      "category": "Creative",
+      "required_skills": [
+        {"skill": "Writing", "importance": 0.95},
+        {"skill": "Editing", "importance": 0.85},
+        {"skill": "SEO", "importance": 0.7},
+        {"skill": "Research", "importance": 0.8},
+        {"skill": "Creativity", "importance": 0.85},
+        {"skill": "Time Management", "importance": 0.7},
+        {"skill": "Communication", "importance": 0.75}
+      ],
+      "salary_range": {
+        "entry_level": "₹2-5 LPA",
+        "mid_level": "₹5-10 LPA",
+        "senior_level": "₹10-20+ LPA"
+      },
+      "industry_demand_score": 7.2,
+      "education_required": "Bachelor's in English, Journalism, or related",
+      "growth_potential": "Medium"
+    },
+    {
+      "id": 9,
+      "role_name": "Network Administrator",
+      "category": "IT Infrastructure",
+      "required_skills": [
+        {"skill": "Networking", "importance": 0.95},
+        {"skill": "Security", "importance": 0.85},
+        {"skill": "Troubleshooting", "importance": 0.9},
+        {"skill": "Cisco", "importance": 0.8},
+        {"skill": "Firewall Management", "importance": 0.75},
+        {"skill": "Linux", "importance": 0.7},
+        {"skill": "Documentation", "importance": 0.6}
+      ],
+      "salary_range": {
+        "entry_level": "₹3-6 LPA",
+        "mid_level": "₹6-12 LPA",
+        "senior_level": "₹12-25+ LPA"
+      },
+      "industry_demand_score": 8.0,
+      "education_required": "Bachelor's in IT, Computer Science, or related",
+      "growth_potential": "Medium"
+    },
+    {
+      "id": 10,
+      "role_name": "Business Analyst",
+      "category": "Business",
+      "required_skills": [
+        {"skill": "Business Analysis", "importance": 0.9},
+        {"skill": "Requirements Gathering", "importance": 0.85},
+        {"skill": "SQL", "importance": 0.75},
+        {"skill": "Communication", "importance": 0.85},
+        {"skill": "Problem Solving", "importance": 0.8},
+        {"skill": "Documentation", "importance": 0.75},
+        {"skill": "Stakeholder Management", "importance": 0.8}
+      ],
+      "salary_range": {
+        "entry_level": "₹4-8 LPA",
+        "mid_level": "₹8-16 LPA",
+        "senior_level": "₹16-35+ LPA"
+      },
+      "industry_demand_score": 8.3,
+      "education_required": "Bachelor's in Business, IT, or related",
+      "growth_potential": "High"
+    }
+  ]
+}

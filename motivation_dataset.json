@@ -1,0 +1,123 @@
+{
+  "motivation_responses": [
+    {
+      "id": 1,
+      "trigger_phrases": ["confused", "lost", "don't know what to do", "uncertain", "not sure"],
+      "response_type": "career_clarity",
+      "title": "Finding Your Career Direction",
+      "content": "Career confusion is common and completely normal. Let's approach this systematically by analyzing your strengths, interests, and market opportunities.",
+      "action_steps": [
+        "Complete a comprehensive skills assessment",
+        "Explore high-demand career paths matching your profile",
+        "Create a 30-day action plan with specific milestones",
+        "Connect with professionals in your areas of interest"
+      ],
+      "encouragement": "Every successful professional started exactly where you are now. The key is taking that first step with clarity and purpose."
+    },
+    {
+      "id": 2,
+      "trigger_phrases": ["failed exam", "didn't pass", "unsuccessful", "not selected"],
+      "response_type": "exam_failure",
+      "title": "Turning Setbacks into Comebacks",
+      "content": "Exam setbacks are stepping stones, not roadblocks. Let's analyze what happened and create a stronger preparation strategy.",
+      "action_steps": [
+        "Conduct a thorough performance analysis",
+        "Identify specific knowledge gaps and weak areas",
+        "Revise your study schedule with focused improvement areas",
+        "Practice with mock tests and previous year papers",
+        "Join study groups or seek mentorship for support"
+      ],
+      "encouragement": "Many successful leaders faced multiple failures before achieving their goals. Your persistence will be your greatest strength."
+    },
+    {
+      "id": 3,
+      "trigger_phrases": ["low confidence", "not good enough", "can't do it", "doubt myself"],
+      "response_type": "confidence_building",
+      "title": "Building Unshakeable Confidence",
+      "content": "Self-doubt is natural, but your capabilities are greater than you currently recognize. Let's build your confidence through structured progress.",
+      "action_steps": [
+        "List your past achievements and successes",
+        "Set small, achievable goals to build momentum",
+        "Develop a skill through consistent daily practice",
+        "Seek feedback and celebrate small wins",
+        "Practice positive self-talk and visualization"
+      ],
+      "encouragement": "Confidence is built through competence. Focus on small, consistent improvements and your self-belief will naturally grow."
+    },
+    {
+      "id": 4,
+      "trigger_phrases": ["burnout", "tired", "exhausted", "overwhelmed", "stressed"],
+      "response_type": "burnout_management",
+      "title": "Recharging for Sustainable Success",
+      "content": "Burnout is a signal that your current approach needs adjustment, not that you should give up. Let's create a balanced strategy.",
+      "action_steps": [
+        "Take a 24-48 hour complete break from studying",
+        "Establish a structured daily routine with breaks",
+        "Incorporate physical activity and mindfulness",
+        "Break large goals into smaller, manageable tasks",
+        "Connect with supportive friends or mentors"
+      ],
+      "encouragement": "Rest is not weakness; it's strategic. The most successful people know when to pause and recharge for better performance."
+    },
+    {
+      "id": 5,
+      "trigger_phrases": ["no motivation", "procrastinating", "can't focus", "lazy"],
+      "response_type": "motivation_boost",
+      "title": "Reigniting Your Drive",
+      "content": "Motivation follows action, not the other way around. Let's create momentum through small, consistent steps.",
+      "action_steps": [
+        "Start with just 15 minutes of focused work",
+        "Create a vision board with your career goals",
+        "Find an accountability partner or study group",
+        "Track your progress visually with charts or journals",
+        "Reward yourself for completing small milestones"
+      ],
+      "encouragement": "The hardest part is starting. Once you begin, momentum will carry you forward. Your future self will thank you for starting today."
+    },
+    {
+      "id": 6,
+      "trigger_phrases": ["competition", "too many candidates", "difficult to get selected"],
+      "response_type": "competition_anxiety",
+      "title": "Standing Out in a Competitive World",
+      "content": "Competition is real, but so is opportunity. Let's focus on what makes you unique and valuable to employers.",
+      "action_steps": [
+        "Identify your unique combination of skills and experiences",
+        "Develop in-demand skills that set you apart",
+        "Build a strong professional network",
+        "Create a portfolio showcasing your best work",
+        "Practice interview skills and personal branding"
+      ],
+      "encouragement": "Every job seeker faces competition, but those who prepare strategically and persist consistently succeed. Your preparation will be your competitive advantage."
+    },
+    {
+      "id": 7,
+      "trigger_phrases": ["age", "too old", "too young", "late start"],
+      "response_type": "age_concerns",
+      "title": "Age is Just a Number",
+      "content": "Your career journey is unique to you. Many successful professionals started at different ages. What matters is your commitment and strategy.",
+      "action_steps": [
+        "Focus on skills that are always in demand",
+        "Leverage your life experience as an advantage",
+        "Network with professionals who started later in life",
+        "Create a realistic timeline for your career transition",
+        "Emphasize your maturity and reliability in interviews"
+      ],
+      "encouragement": "The job market values skills and results, not age. Your unique perspective and experience can be significant advantages."
+    },
+    {
+      "id": 8,
+      "trigger_phrases": ["financial pressure", "need job urgently", "family expectations"],
+      "response_type": "pressure_management",
+      "title": "Managing External Pressures",
+      "content": "Financial and family pressures are real, but they don't have to derail your long-term success. Let's create a balanced approach.",
+      "action_steps": [
+        "Create a realistic timeline with immediate and long-term goals",
+        "Consider part-time work or freelancing while studying",
+        "Communicate openly with family about your career plan",
+        "Focus on skills with quick employment potential",
+        "Build an emergency fund to reduce financial stress"
+      ],
+      "encouragement": "Many successful professionals faced similar pressures. Your strategic approach to balancing immediate needs with long-term goals will pay off."
+    }
+  ]
+}

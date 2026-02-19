@@ -1,0 +1,544 @@
+{
+  "skills": [
+    {
+      "id": 1,
+      "skill_name": "Programming",
+      "category": "Technical",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 6,
+      "related_skills": ["Problem Solving", "Algorithms", "Data Structures"],
+      "description": "Ability to write code in various programming languages"
+    },
+    {
+      "id": 2,
+      "skill_name": "Python",
+      "category": "Technical",
+      "difficulty_level": "Beginner",
+      "learning_time_months": 3,
+      "related_skills": ["Programming", "Data Analysis", "Machine Learning"],
+      "description": "Programming language widely used in data science and web development"
+    },
+    {
+      "id": 3,
+      "skill_name": "Problem Solving",
+      "category": "Cognitive",
+      "difficulty_level": "Advanced",
+      "learning_time_months": 12,
+      "related_skills": ["Critical Thinking", "Analytical Skills", "Programming"],
+      "description": "Ability to analyze problems and develop effective solutions"
+    },
+    {
+      "id": 4,
+      "skill_name": "Data Structures",
+      "category": "Technical",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 4,
+      "related_skills": ["Algorithms", "Programming", "Database Management"],
+      "description": "Knowledge of arrays, linked lists, trees, graphs, and other data structures"
+    },
+    {
+      "id": 5,
+      "skill_name": "Algorithms",
+      "category": "Technical",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 5,
+      "related_skills": ["Data Structures", "Problem Solving", "Programming"],
+      "description": "Understanding of sorting, searching, and optimization algorithms"
+    },
+    {
+      "id": 6,
+      "skill_name": "Version Control",
+      "category": "Technical",
+      "difficulty_level": "Beginner",
+      "learning_time_months": 2,
+      "related_skills": ["Programming", "Collaboration", "Documentation"],
+      "description": "Using tools like Git for source code management"
+    },
+    {
+      "id": 7,
+      "skill_name": "Database Management",
+      "category": "Technical",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 4,
+      "related_skills": ["SQL", "Data Analysis", "Programming"],
+      "description": "Designing, implementing, and maintaining databases"
+    },
+    {
+      "id": 8,
+      "skill_name": "Web Development",
+      "category": "Technical",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 6,
+      "related_skills": ["HTML/CSS", "JavaScript", "Programming"],
+      "description": "Building websites and web applications"
+    },
+    {
+      "id": 9,
+      "skill_name": "Statistics",
+      "category": "Analytical",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 6,
+      "related_skills": ["Mathematics", "Data Analysis", "Machine Learning"],
+      "description": "Understanding of statistical concepts and methods"
+    },
+    {
+      "id": 10,
+      "skill_name": "Machine Learning",
+      "category": "Technical",
+      "difficulty_level": "Advanced",
+      "learning_time_months": 8,
+      "related_skills": ["Python", "Statistics", "Mathematics"],
+      "description": "Building and deploying machine learning models"
+    },
+    {
+      "id": 11,
+      "skill_name": "Data Analysis",
+      "category": "Analytical",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 5,
+      "related_skills": ["Statistics", "SQL", "Excel"],
+      "description": "Analyzing data to extract insights and make decisions"
+    },
+    {
+      "id": 12,
+      "skill_name": "SQL",
+      "category": "Technical",
+      "difficulty_level": "Beginner",
+      "learning_time_months": 2,
+      "related_skills": ["Database Management", "Data Analysis"],
+      "description": "Querying and managing relational databases"
+    },
+    {
+      "id": 13,
+      "skill_name": "Data Visualization",
+      "category": "Technical",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 3,
+      "related_skills": ["Data Analysis", "Design Principles", "Communication"],
+      "description": "Creating visual representations of data"
+    },
+    {
+      "id": 14,
+      "skill_name": "Mathematics",
+      "category": "Analytical",
+      "difficulty_level": "Advanced",
+      "learning_time_months": 12,
+      "related_skills": ["Statistics", "Problem Solving", "Machine Learning"],
+      "description": "Strong foundation in mathematical concepts"
+    },
+    {
+      "id": 15,
+      "skill_name": "SEO",
+      "category": "Marketing",
+      "difficulty_level": "Beginner",
+      "learning_time_months": 3,
+      "related_skills": ["Content Marketing", "Analytics", "Writing"],
+      "description": "Search Engine Optimization techniques"
+    },
+    {
+      "id": 16,
+      "skill_name": "Content Marketing",
+      "category": "Marketing",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 4,
+      "related_skills": ["Writing", "SEO", "Social Media Marketing"],
+      "description": "Creating and distributing valuable content"
+    },
+    {
+      "id": 17,
+      "skill_name": "Social Media Marketing",
+      "category": "Marketing",
+      "difficulty_level": "Beginner",
+      "learning_time_months": 2,
+      "related_skills": ["Content Marketing", "Analytics", "Communication"],
+      "description": "Marketing through social media platforms"
+    },
+    {
+      "id": 18,
+      "skill_name": "Analytics",
+      "category": "Analytical",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 4,
+      "related_skills": ["Data Analysis", "Statistics", "Problem Solving"],
+      "description": "Using data to measure and optimize performance"
+    },
+    {
+      "id": 19,
+      "skill_name": "Copywriting",
+      "category": "Creative",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 3,
+      "related_skills": ["Writing", "Communication", "Marketing"],
+      "description": "Writing persuasive marketing copy"
+    },
+    {
+      "id": 20,
+      "skill_name": "Email Marketing",
+      "category": "Marketing",
+      "difficulty_level": "Beginner",
+      "learning_time_months": 2,
+      "related_skills": ["Copywriting", "Analytics", "Communication"],
+      "description": "Marketing through email campaigns"
+    },
+    {
+      "id": 21,
+      "skill_name": "PPC Advertising",
+      "category": "Marketing",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 3,
+      "related_skills": ["Analytics", "Marketing", "Budget Management"],
+      "description": "Pay-per-click advertising campaigns"
+    },
+    {
+      "id": 22,
+      "skill_name": "AutoCAD",
+      "category": "Technical",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 4,
+      "related_skills": ["Design Principles", "Project Management"],
+      "description": "Computer-aided design software"
+    },
+    {
+      "id": 23,
+      "skill_name": "Structural Analysis",
+      "category": "Technical",
+      "difficulty_level": "Advanced",
+      "learning_time_months": 8,
+      "related_skills": ["Mathematics", "Physics", "Engineering"],
+      "description": "Analyzing structural integrity and load distribution"
+    },
+    {
+      "id": 24,
+      "skill_name": "Project Management",
+      "category": "Business",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 6,
+      "related_skills": ["Communication", "Leadership", "Planning"],
+      "description": "Managing projects from inception to completion"
+    },
+    {
+      "id": 25,
+      "skill_name": "Construction Management",
+      "category": "Technical",
+      "difficulty_level": "Advanced",
+      "learning_time_months": 8,
+      "related_skills": ["Project Management", "Engineering", "Leadership"],
+      "description": "Managing construction projects and teams"
+    },
+    {
+      "id": 26,
+      "skill_name": "Physics",
+      "category": "Analytical",
+      "difficulty_level": "Advanced",
+      "learning_time_months": 12,
+      "related_skills": ["Mathematics", "Problem Solving", "Engineering"],
+      "description": "Understanding of physical principles and laws"
+    },
+    {
+      "id": 27,
+      "skill_name": "Building Codes",
+      "category": "Technical",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 3,
+      "related_skills": ["Engineering", "Compliance", "Documentation"],
+      "description": "Knowledge of construction regulations and standards"
+    },
+    {
+      "id": 28,
+      "skill_name": "Financial Analysis",
+      "category": "Finance",
+      "difficulty_level": "Advanced",
+      "learning_time_months": 6,
+      "related_skills": ["Accounting", "Excel", "Business Acumen"],
+      "description": "Analyzing financial data and making investment decisions"
+    },
+    {
+      "id": 29,
+      "skill_name": "Excel",
+      "category": "Technical",
+      "difficulty_level": "Beginner",
+      "learning_time_months": 2,
+      "related_skills": ["Data Analysis", "Financial Analysis", "Accounting"],
+      "description": "Advanced spreadsheet skills"
+    },
+    {
+      "id": 30,
+      "skill_name": "Accounting",
+      "category": "Finance",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 4,
+      "related_skills": ["Financial Analysis", "Excel", "Business Acumen"],
+      "description": "Recording and analyzing financial transactions"
+    },
+    {
+      "id": 31,
+      "skill_name": "Financial Modeling",
+      "category": "Finance",
+      "difficulty_level": "Advanced",
+      "learning_time_months": 6,
+      "related_skills": ["Financial Analysis", "Excel", "Accounting"],
+      "description": "Creating financial models for decision making"
+    },
+    {
+      "id": 32,
+      "skill_name": "Business Acumen",
+      "category": "Business",
+      "difficulty_level": "Advanced",
+      "learning_time_months": 8,
+      "related_skills": ["Communication", "Problem Solving", "Leadership"],
+      "description": "Understanding of business operations and strategy"
+    },
+    {
+      "id": 33,
+      "skill_name": "Design Principles",
+      "category": "Creative",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 4,
+      "related_skills": ["Creativity", "Communication", "User Research"],
+      "description": "Fundamental principles of good design"
+    },
+    {
+      "id": 34,
+      "skill_name": "Figma",
+      "category": "Technical",
+      "difficulty_level": "Beginner",
+      "learning_time_months": 2,
+      "related_skills": ["Design Principles", "Prototyping", "User Research"],
+      "description": "UI/UX design and prototyping tool"
+    },
+    {
+      "id": 35,
+      "skill_name": "User Research",
+      "category": "Research",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 4,
+      "related_skills": ["Communication", "Design Principles", "Analytics"],
+      "description": "Understanding user needs and behaviors"
+    },
+    {
+      "id": 36,
+      "skill_name": "Prototyping",
+      "category": "Technical",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 3,
+      "related_skills": ["Figma", "Design Principles", "User Research"],
+      "description": "Creating interactive prototypes"
+    },
+    {
+      "id": 37,
+      "skill_name": "Adobe Creative Suite",
+      "category": "Technical",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 5,
+      "related_skills": ["Design Principles", "Creativity", "Communication"],
+      "description": "Proficiency in Adobe design software"
+    },
+    {
+      "id": 38,
+      "skill_name": "HTML/CSS",
+      "category": "Technical",
+      "difficulty_level": "Beginner",
+      "learning_time_months": 2,
+      "related_skills": ["Web Development", "Design Principles", "JavaScript"],
+      "description": "Web markup and styling languages"
+    },
+    {
+      "id": 39,
+      "skill_name": "Communication",
+      "category": "Soft Skills",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 6,
+      "related_skills": ["Leadership", "Presentation Skills", "Writing"],
+      "description": "Effective verbal and written communication"
+    },
+    {
+      "id": 40,
+      "skill_name": "CAD Software",
+      "category": "Technical",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 4,
+      "related_skills": ["Engineering", "Design Principles", "Mathematics"],
+      "description": "Computer-aided design and drafting software"
+    },
+    {
+      "id": 41,
+      "skill_name": "Thermodynamics",
+      "category": "Technical",
+      "difficulty_level": "Advanced",
+      "learning_time_months": 8,
+      "related_skills": ["Physics", "Mathematics", "Engineering"],
+      "description": "Study of heat and energy transfer"
+    },
+    {
+      "id": 42,
+      "skill_name": "Manufacturing Processes",
+      "category": "Technical",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 4,
+      "related_skills": ["Engineering", "Project Management", "Quality Control"],
+      "description": "Knowledge of manufacturing techniques and processes"
+    },
+    {
+      "id": 43,
+      "skill_name": "Writing",
+      "category": "Creative",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 6,
+      "related_skills": ["Communication", "Research", "Editing"],
+      "description": "Ability to write clearly and effectively"
+    },
+    {
+      "id": 44,
+      "skill_name": "Editing",
+      "category": "Creative",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 3,
+      "related_skills": ["Writing", "Communication", "Attention to Detail"],
+      "description": "Reviewing and improving written content"
+    },
+    {
+      "id": 45,
+      "skill_name": "Creativity",
+      "category": "Soft Skills",
+      "difficulty_level": "Advanced",
+      "learning_time_months": 12,
+      "related_skills": ["Problem Solving", "Design Principles", "Writing"],
+      "description": "Ability to generate innovative ideas and solutions"
+    },
+    {
+      "id": 46,
+      "skill_name": "Time Management",
+      "category": "Soft Skills",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 4,
+      "related_skills": ["Project Management", "Planning", "Prioritization"],
+      "description": "Effective management of time and priorities"
+    },
+    {
+      "id": 47,
+      "skill_name": "Networking",
+      "category": "Technical",
+      "difficulty_level": "Advanced",
+      "learning_time_months": 8,
+      "related_skills": ["Security", "Troubleshooting", "Linux"],
+      "description": "Computer network configuration and management"
+    },
+    {
+      "id": 48,
+      "skill_name": "Security",
+      "category": "Technical",
+      "difficulty_level": "Advanced",
+      "learning_time_months": 8,
+      "related_skills": ["Networking", "Troubleshooting", "Risk Management"],
+      "description": "Network and information security principles"
+    },
+    {
+      "id": 49,
+      "skill_name": "Troubleshooting",
+      "category": "Technical",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 4,
+      "related_skills": ["Problem Solving", "Networking", "Technical Support"],
+      "description": "Diagnosing and resolving technical issues"
+    },
+    {
+      "id": 50,
+      "skill_name": "Cisco",
+      "category": "Technical",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 4,
+      "related_skills": ["Networking", "Security", "Troubleshooting"],
+      "description": "Cisco networking equipment and protocols"
+    },
+    {
+      "id": 51,
+      "skill_name": "Firewall Management",
+      "category": "Technical",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 3,
+      "related_skills": ["Security", "Networking", "Risk Management"],
+      "description": "Configuring and managing network firewalls"
+    },
+    {
+      "id": 52,
+      "skill_name": "Linux",
+      "category": "Technical",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 4,
+      "related_skills": ["Networking", "Security", "Troubleshooting"],
+      "description": "Linux operating system administration"
+    },
+    {
+      "id": 53,
+      "skill_name": "Documentation",
+      "category": "Soft Skills",
+      "difficulty_level": "Beginner",
+      "learning_time_months": 2,
+      "related_skills": ["Communication", "Writing", "Technical Support"],
+      "description": "Creating and maintaining technical documentation"
+    },
+    {
+      "id": 54,
+      "skill_name": "Business Analysis",
+      "category": "Business",
+      "difficulty_level": "Advanced",
+      "learning_time_months": 6,
+      "related_skills": ["Requirements Gathering", "Communication", "Problem Solving"],
+      "description": "Analyzing business needs and recommending solutions"
+    },
+    {
+      "id": 55,
+      "skill_name": "Requirements Gathering",
+      "category": "Business",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 4,
+      "related_skills": ["Business Analysis", "Communication", "Documentation"],
+      "description": "Eliciting and documenting business requirements"
+    },
+    {
+      "id": 56,
+      "skill_name": "Stakeholder Management",
+      "category": "Business",
+      "difficulty_level": "Advanced",
+      "learning_time_months": 6,
+      "related_skills": ["Communication", "Leadership", "Project Management"],
+      "description": "Managing relationships with project stakeholders"
+    },
+    {
+      "id": 57,
+      "skill_name": "Leadership",
+      "category": "Soft Skills",
+      "difficulty_level": "Advanced",
+      "learning_time_months": 8,
+      "related_skills": ["Communication", "Project Management", "Decision Making"],
+      "description": "Ability to lead and motivate teams"
+    },
+    {
+      "id": 58,
+      "skill_name": "Critical Thinking",
+      "category": "Cognitive",
+      "difficulty_level": "Advanced",
+      "learning_time_months": 8,
+      "related_skills": ["Problem Solving", "Analytical Skills", "Decision Making"],
+      "description": "Objective analysis and evaluation of information"
+    },
+    {
+      "id": 59,
+      "skill_name": "Analytical Skills",
+      "category": "Cognitive",
+      "difficulty_level": "Advanced",
+      "learning_time_months": 8,
+      "related_skills": ["Critical Thinking", "Problem Solving", "Data Analysis"],
+      "description": "Ability to analyze complex information"
+    },
+    {
+      "id": 60,
+      "skill_name": "Collaboration",
+      "category": "Soft Skills",
+      "difficulty_level": "Intermediate",
+      "learning_time_months": 4,
+      "related_skills": ["Communication", "Teamwork", "Leadership"],
+      "description": "Working effectively with others"
+    }
+  ]
+}

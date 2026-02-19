@@ -1,0 +1,92 @@
+{
+  "interview_questions": [
+    {
+      "id": 1,
+      "role_category": "Software Developer",
+      "technical_questions": [
+        {
+          "question": "Explain the difference between synchronous and asynchronous programming.",
+          "difficulty": "Intermediate",
+          "focus_area": "Programming Concepts",
+          "sample_answer": "Synchronous programming executes tasks sequentially, blocking further execution until the current task completes. Asynchronous programming allows multiple tasks to run concurrently without blocking, using callbacks, promises, or async/await patterns."
+        },
+        {
+          "question": "What is the time complexity of binary search and when would you use it?",
+          "difficulty": "Beginner",
+          "focus_area": "Algorithms",
+          "sample_answer": "Binary search has O(log n) time complexity. Use it when searching in a sorted array or when you need efficient lookups in ordered data structures."
+        },
+        {
+          "question": "How would you optimize database queries for a high-traffic application?",
+          "difficulty": "Advanced",
+          "focus_area": "Database Optimization",
+          "sample_answer": "I would use indexing, query optimization, caching strategies, connection pooling, and consider database sharding. Also implement proper normalization and avoid N+1 query problems."
+        }
+      ],
+      "hr_questions": [
+        {
+          "question": "Describe a challenging technical problem you solved and your approach.",
+          "difficulty": "Intermediate",
+          "focus_area": "Problem Solving",
+          "sample_answer": "I faced a performance issue in a web application where page load times were slow. I analyzed the code, identified bottlenecks, implemented caching, optimized database queries, and reduced load time by 60%."
+        },
+        {
+          "question": "How do you stay updated with the latest technology trends?",
+          "difficulty": "Beginner",
+          "focus_area": "Continuous Learning",
+          "sample_answer": "I follow tech blogs, attend webinars, participate in online communities, take online courses, and work on personal projects to stay current with emerging technologies."
+        }
+      ],
+      "aptitude_question": {
+        "question": "If 8 machines can produce 800 items in 6 hours, how many items can 12 machines produce in 4 hours?",
+        "difficulty": "Beginner",
+        "focus_area": "Mathematical Reasoning",
+        "answer": "800 items. Explanation: 8 machines × 6 hours = 48 machine-hours for 800 items. 12 machines × 4 hours = 48 machine-hours, so same output."
+      }
+    },
+    {
+      "id": 2,
+      "role_category": "Data Scientist",
+      "technical_questions": [
+        {
+          "question": "Explain the bias-variance tradeoff in machine learning.",
+          "difficulty": "Intermediate",
+          "focus_area": "Machine Learning Theory",
+          "sample_answer": "Bias refers to errors from overly simplistic assumptions, while variance refers to errors from sensitivity to small training set fluctuations. Good models balance both to minimize total error."
+        },
+        {
+          "question": "How would you handle missing data in a dataset?",
+          "difficulty": "Intermediate",
+          "focus_area": "Data Preprocessing",
+          "sample_answer": "I would analyze the missing data pattern, use imputation methods (mean, median, mode), advanced techniques like KNN imputation, or consider removing rows/columns if missingness is excessive."
+        },
+        {
+          "question": "Describe how you would evaluate a classification model's performance.",
+          "difficulty": "Advanced",
+          "focus_area": "Model Evaluation",
+          "sample_answer": "I would use confusion matrix, precision, recall, F1-score, ROC-AUC curve, and consider the specific business context to choose appropriate metrics. Cross-validation helps ensure robustness."
+        }
+      ],
+      "hr_questions": [
+        {
+          "question": "Tell me about a data science project that had significant business impact.",
+          "difficulty": "Intermediate",
+          "focus_area": "Business Impact",
+          "sample_answer": "I built a customer churn prediction model that reduced churn by 25% by identifying at-risk customers and enabling targeted retention strategies, saving the company ₹2 crores annually."
+        },
+        {
+          "question": "How do you communicate complex technical findings to non-technical stakeholders?",
+          "difficulty": "Beginner",
+          "focus_area": "Communication",
+          "sample_answer": "I use simple language, visualizations, focus on business implications, and provide actionable recommendations rather than technical details."
+        }
+      ],
+      "aptitude_question": {
+        "question": "A dataset has 1000 positive and 100 negative samples. What is the baseline accuracy if you always predict positive?",
+        "difficulty": "Beginner",
+        "focus_area": "Statistical Reasoning",
+        "answer": "90.91%. Explanation: 1000 positive out of 1100 total samples = 1000/1100 = 0.9091 or 90.91%."
+      }
+    }
+  ]
+}
