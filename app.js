@@ -2,6 +2,85 @@
 // BrightLearn AI - Application Logic
 // ============================================
 
+// Job Categories Data for 12th Fail/Pass
+const jobCategoriesData = {
+    "private-sector": {
+        category_name: "Private Sector Jobs",
+        jobs: [
+            { name: "Delivery Executive", companies: "Swiggy, Zomato, Amazon, Flipkart" },
+            { name: "Warehouse Assistant", companies: "Amazon, Flipkart, Myntra" },
+            { name: "Packing Staff", companies: "Amazon, FedEx, DTDC" },
+            { name: "Helper / Store Helper", companies: "Retail Stores, Supermarkets" },
+            { name: "Office Boy / Office Assistant", companies: "Corporate Offices" },
+            { name: "Housekeeping Staff", companies: "Hotels, Malls, Offices" },
+            { name: "Security Guard", companies: "Residential Complexes, Malls" },
+            { name: "Peon", companies: "Government Offices, Schools" },
+            { name: "Factory Worker", companies: "Manufacturing Units" },
+            { name: "Construction Worker", companies: "Construction Sites" },
+            { name: "Electrician Helper", companies: "Electrical Contractors" },
+            { name: "Mechanic Helper", companies: "Vehicle Service Centers" },
+            { name: "Car Washer", companies: "Car Showrooms, Service Centers" },
+            { name: "Bike Mechanic Assistant", companies: "Bike Service Centers" },
+            { name: "Loading & Unloading Staff", companies: "Godowns, Warehouses" },
+            { name: "Hotel Waiter / Steward", companies: "Hotels, Restaurants" },
+            { name: "Kitchen Helper", companies: "Hotels, Canteens" },
+            { name: "Cleaner", companies: "Mall / Office / Hospital" },
+            { name: "Driver", companies: "With valid license" },
+            { name: "Courier Delivery Staff", companies: "FedEx, DTDC, BlueDart" }
+        ]
+    },
+    "sales-support": {
+        category_name: "Sales & Support Jobs",
+        jobs: [
+            { name: "Telecaller", companies: "BPO, KPO, Marketing Firms" },
+            { name: "Field Sales Executive", companies: "FMCG, Real Estate" },
+            { name: "Retail Sales Associate", companies: "Showrooms, Malls" },
+            { name: "Promoter", companies: "Mall / Events" },
+            { name: "Customer Service Support", companies: "With Basic English" }
+        ]
+    },
+    "skill-based": {
+        category_name: "Skill-Based Jobs",
+        jobs: [
+            { name: "Plumber", companies: "Self-employed / Companies" },
+            { name: "Electrician", companies: "After short training" },
+            { name: "AC Technician", companies: "Service Centers" },
+            { name: "Mobile Repair Technician", companies: "Service Centers" },
+            { name: "Computer Repair Technician", companies: "Service Centers" },
+            { name: "Tailor", companies: "Fashion Houses / Self" },
+            { name: "Beautician", companies: "Salons / Self" },
+            { name: "Barber", companies: "Salons / Self" },
+            { name: "Photographer Assistant", companies: "Studios" },
+            { name: "Printing Shop Operator", companies: "Printing Press" }
+        ]
+    },
+    "government": {
+        category_name: "Government Jobs",
+        jobs: [
+            { name: "Railway Group D", companies: "Some posts allow 10th" },
+            { name: "Police Constable", companies: "10th/12th depending on state" },
+            { name: "Home Guard", companies: "State Government" },
+            { name: "Army Soldier", companies: "Minimum 10th/12th" },
+            { name: "Forest Guard", companies: "State-wise exam" }
+        ]
+    },
+    "self-employment": {
+        category_name: "Self-Employment",
+        jobs: [
+            { name: "Small Grocery Shop", companies: "Self-owned" },
+            { name: "Street Food Stall", companies: "Self-owned" },
+            { name: "Tea Stall", companies: "Self-owned" },
+            { name: "Freelance Delivery Partner", companies: "Part-time" },
+            { name: "Online Reselling", companies: "Meesho / Flipkart" },
+            { name: "YouTube Content Creator", companies: "Self-owned" },
+            { name: "Car Washing Business", companies: "Self-owned" },
+            { name: "Mobile Repair Shop", companies: "Self-owned" },
+            { name: "Poultry Farming", companies: "Self-owned" },
+            { name: "Dairy Farming", companies: "Self-owned" }
+        ]
+    }
+};
+
 // Embedded datasets for standalone functionality
 const rolesData = [
     {
@@ -428,9 +507,27 @@ function generateBotResponse(message) {
 function matchCareers() {
     const userSkillsInput = document.getElementById('userSkills').value;
     const preferredSector = document.getElementById('preferredSector').value;
+    const qualifiedSelect = document.getElementById('qualified');
+    const targetCareerSelect = document.getElementById('targetCareer');
+    
+    const qualifiedValue = qualifiedSelect ? qualifiedSelect.value : '';
+    const targetCareerValue = targetCareerSelect ? targetCareerSelect.value : '';
 
+    // If target career is selected, show job categories
+    if (targetCareerValue && jobCategoriesData[targetCareerValue]) {
+        displayJobCategoryResults(targetCareerValue);
+        return;
+    }
+
+    // If qualified is "no" (12th fail), show all job categories instead of regular careers
+    if (qualifiedValue === "no") {
+        displayAllJobCategories();
+        return;
+    }
+
+    // If no skills entered, show all job categories
     if (!userSkillsInput.trim()) {
-        alert('Please enter at least one skill.');
+        displayAllJobCategories();
         return;
     }
 
@@ -472,6 +569,69 @@ function matchCareers() {
 
     filteredRoles.sort((a, b) => b.matchPercentage - a.matchPercentage);
     displayCareerResults(filteredRoles.slice(0, 5), userSkills);
+}
+
+function displayJobCategoryResults(targetCareerKey) {
+    const container = document.getElementById('careerResults');
+    if (!container) return;
+
+    const category = jobCategoriesData[targetCareerKey];
+    if (!category) return;
+
+    let html = '<h2><i class="fas fa-briefcase"></i> ' + category.category_name + '</h2>';
+    
+    category.jobs.forEach((job, index) => {
+        html += '<div class="role-card" style="animation-delay:' + (index * 0.05) + 's">' +
+            '<div class="role-card-header">' +
+            '<div class="role-card-title"><h3>' + job.name + '</h3></div>' +
+            '<div class="match-percentage"><span class="match-label">Available</span></div>' +
+            '</div>' +
+            '<p class="role-description">Companies: <strong>' + job.companies + '</strong></p>' +
+            '</div>';
+    });
+
+    container.innerHTML = html;
+}
+
+function displayAllJobCategories() {
+    const container = document.getElementById('careerResults');
+    if (!container) return;
+
+    let html = '<h2><i class="fas fa-briefcase"></i> Available Job Opportunities</h2>';
+    
+    const categoriesToShow = ['private-sector', 'sales-support', 'skill-based', 'government', 'self-employment'];
+    
+    categoriesToShow.forEach(catKey => {
+        const category = jobCategoriesData[catKey];
+        if (!category) return;
+
+        html += '<div style="margin-bottom: 30px;">';
+        html += '<h3 style="color: var(--accent-primary); margin-bottom: 15px;"><i class="fas fa-' + getCategoryIcon(catKey) + '"></i> ' + category.category_name + '</h3>';
+        
+        category.jobs.forEach((job, index) => {
+            html += '<div class="role-card" style="margin-bottom: 10px; animation-delay:' + (index * 0.02) + 's">' +
+                '<div class="role-card-header">' +
+                '<div class="role-card-title"><h4>' + job.name + '</h4></div>' +
+                '</div>' +
+                '<p class="role-description" style="font-size: 0.9rem;">Companies: <strong>' + job.companies + '</strong></p>' +
+                '</div>';
+        });
+        
+        html += '</div>';
+    });
+
+    container.innerHTML = html;
+}
+
+function getCategoryIcon(categoryKey) {
+    const icons = {
+        'private-sector': 'truck',
+        'sales-support': 'headset',
+        'skill-based': 'tools',
+        'government': 'landmark',
+        'self-employment': 'store'
+    };
+    return icons[categoryKey] || 'briefcase';
 }
 
 function displayCareerResults(matchedRoles, userSkills) {
